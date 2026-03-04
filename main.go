@@ -99,6 +99,29 @@ func getSensorPath(sensorLabel string) string {
 			}
 		}
 	}
+	zones, err := os.ReadDir("/sys/class/thermal/")
+	if err != nil {
+		return ""
+	}
+
+	for _, z := range zones {
+
+		if strings.HasPrefix(z.Name(), "thermal_zone") {
+
+			base := "/sys/class/thermal/" + z.Name()
+
+			t := readFirstLine(base + "/type")
+
+			if t == "x86_pkg_temp" {
+
+				if debugMode {
+					fmt.Printf("Found CPU thermal sensor: %s\n", base+"/temp")
+				}
+
+				return base + "/temp"
+			}
+		}
+	}
 	return ""
 }
 
