@@ -5,6 +5,7 @@ After=network.target
 [Service]
 ExecStart=/usr/local/bin/AorusWaterForce360-linux
 Restart=on-failure
+RestartSec=5
 Type=simple
 
 [Install]

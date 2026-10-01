@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2d35"/>
+      <stop offset="1" stop-color="#121318"/>
+    </linearGradient>
+    <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa0ad"/>
+      <stop offset="0.5" stop-color="#4a4e58"/>
+      <stop offset="1" stop-color="#23252c"/>
+    </linearGradient>
+    <radialGradient id="lcd" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#16324a"/>
+      <stop offset="1" stop-color="#070b12"/>
+    </radialGradient>
+    <linearGradient id="gauge" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d3ff"/>
+      <stop offset="0.6" stop-color="#ffb13b"/>
+      <stop offset="1" stop-color="#ff5a1f"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9f3ff"/>
+      <stop offset="1" stop-color="#39a8ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- app tile with a darker bottom edge, Adwaita style -->
+  <rect x="8" y="12" width="112" height="108" rx="26" fill="#0a0b0e"/>
+  <rect x="8" y="8" width="112" height="108" rx="26" fill="url(#bg)"/>
+
+  <!-- pump head: orange light ring, metal bezel, round LCD -->
+  <circle cx="64" cy="62" r="47" fill="none" stroke="#ff6a1f" stroke-opacity="0.25" stroke-width="7"/>
+  <circle cx="64" cy="62" r="46.5" fill="none" stroke="#ff7a2f" stroke-width="2.5"/>
+  <circle cx="64" cy="62" r="44" fill="url(#bezel)"/>
+  <circle cx="64" cy="62" r="37" fill="url(#lcd)"/>
+
+  <!-- temperature gauge on the LCD: 270° track and a ~70% value arc -->
+  <path d="M 42.8 83.2 A 30 30 0 1 1 85.2 83.2" fill="none" stroke="#ffffff" stroke-opacity="0.12"
+        stroke-width="6" stroke-linecap="round"/>
+  <path d="M 42.8 83.2 A 30 30 0 1 1 92.5 52.7" fill="none" stroke="url(#gauge)"
+        stroke-width="6" stroke-linecap="round"/>
+  <circle cx="92.5" cy="52.7" r="4.2" fill="#fff4e6"/>
+
+  <!-- small fan in the middle of the display -->
+  <g transform="translate(64 62)" fill="url(#blade)">
+    <path id="b" d="M2 -3 C 3 -11, 10 -16, 15 -12 C 17 -10, 14 -5, 7 -1 Z"/>
+    <use href="#b" transform="rotate(90)"/>
+    <use href="#b" transform="rotate(180)"/>
+    <use href="#b" transform="rotate(270)"/>
+  </g>
+  <circle cx="64" cy="62" r="4" fill="#0b1422" stroke="#39a8ff" stroke-width="1.5"/>
+</svg>

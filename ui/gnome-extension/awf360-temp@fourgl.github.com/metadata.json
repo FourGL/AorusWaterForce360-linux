@@ -1,0 +1,7 @@
+{
+  "uuid": "awf360-temp@fourgl.github.com",
+  "name": "WaterForce 360 CPU temperature",
+  "description": "CPU temperature in the top bar, colored from green to red by heat. Shows the same sensor as the AORUS WaterForce 360 display; click it to open the control panel. Part of AorusWaterForce360-linux.",
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "url": "https://github.com/FourGL/AorusWaterForce360-linux"
+}

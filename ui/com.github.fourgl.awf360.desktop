@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=WaterForce 360
+Comment=CPU temperature, cooler fan/pump speed and Aorus WaterForce 360 display control
+Exec=awf360-ui
+Icon=com.github.fourgl.awf360
+Terminal=false
+Categories=System;Monitor;
+StartupWMClass=com.github.fourgl.awf360
